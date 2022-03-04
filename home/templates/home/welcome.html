@@ -4,5 +4,6 @@
 {%block content%}
 
 <h1>welcome</h1>
+<a href="{% url 'notes.new'%}" class="btn btn-outline-primary me-1">Create a new note</a>
 <a href="{%url 'notes.list'%}" class="btn btn-primary">Check out these notes</a>
 {%endblock%}

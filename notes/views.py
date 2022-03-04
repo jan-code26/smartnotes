@@ -20,11 +20,11 @@ class updatenote(UpdateView):
     success_url='/notes'
     form_class=notesforms
 
-class createnote(CreateView):
+class createnote(LoginRequiredMixin,CreateView):
     model=notes
     success_url='/notes'
     form_class=notesforms
-
+    login_url='/login'
     def form_valid(self, form):
         self.object=form.save(commit=False)
         self.object.user=self.request.user
