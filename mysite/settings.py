@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3ne1%q23%$o0p_3hv@ry*s4)dz6f-4(ri)*8n5+8ex$%)f=exc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['boiling-chamber-03286.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'home',
-    'notes'
+    'notes',
 ]
 
 MIDDLEWARE = [
