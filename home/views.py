@@ -11,7 +11,7 @@ from django.shortcuts import redirect
 class createuser(CreateView):
     form_class=UserCreationForm
     template_name='home/register.html'
-    success_url='/notes'
+    success_url='/login'
 
     def get(self,request,*args,**kwargs):
         if(self.request.user.is_authenticated):

@@ -2,7 +2,9 @@
 
 
 {%block content%}
-<h1 class="my-5">these are the notes</h1>
+{% if notes|length%}
+<h1 class="my-5">These are list of notes you stored</h1>
+
 <div class="row row-cols3 g-2">{% for note in notes%}
     <div class="col">
         <div class="p-3 border">
@@ -13,4 +15,10 @@
         </div>
     </div>{%endfor%}
 </div>
+
+{% else %}
+<h1 class="my-5">Add notes here</h1>
+<a href="{% url 'notes.new'%}" class="btn btn-outline-primary me-1">Create</a>
+
+{%endif%}
 {%endblock%}
